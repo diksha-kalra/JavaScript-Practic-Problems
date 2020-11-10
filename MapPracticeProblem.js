@@ -20,8 +20,9 @@ for(let entry of rolls){
     console.log(entry);
 }
 //sorted Map
-sortedMap=new Map([...rolls.entries()].sort((a,b)=>a[1]-b[1]));
-console.log(sortedMap);
+console.log("sorted entries",[...rolls.entries()].sort((a,b)=>a[1]-b[1]));
+console.log("Dice Number with Max counts",[...rolls.entries()].reduce((a,b)=> a[1]>b[1]?a:b));
+console.log("Dice Number with Min counts",[...rolls.entries()].reduce((a,b)=> a[1]<b[1]?a:b));
 }
 
 //Program to generate birth month of 50 individuals
